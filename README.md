@@ -150,6 +150,7 @@ Interactive API docs: `/docs` on the API (locally `http://localhost:3001/docs`).
 │   │   ├── scripts/                dev (uvicorn) and prod (gunicorn) launchers
 │   │   ├── Dockerfile              Production image (port 3001)
 │   │   ├── pyproject.toml, uv.lock Python dependencies (+ Vercel entrypoint)
+│   │   ├── requirements.txt        Runtime dependencies for Vercel (from uv.lock)
 │   │   └── package.json            Lets Turborepo run dev/test/lint/typecheck
 │   └── web/                        Next.js frontend (React)
 │       ├── src/app/                Routes: (landing)/ and (main)/{overview,explorer,accuracy,how-it-works}

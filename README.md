@@ -9,11 +9,7 @@ A web app that shows how far UK wind power forecasts could be trusted when buyin
 
 ## Built with AI: Claude Code
 
-This project was built with **[Claude Code](https://claude.com/claude-code)**, Anthropic's AI coding assistant, working in the terminal under the author's direction. It was used to:
-
-- research and verify the Elexon BMRS APIs (`FUELHH`, `WINDFOR`) against their official OpenAPI spec and live data
-- design and write the FastAPI backend, the Next.js frontend, the Docker setup and the tests
-- write the plain-English copy in the app and this README
+This project was built with **[Claude Code](https://claude.com/claude-code)**, Anthropic's AI coding assistant, working in the terminal under the author's direction.
 
 ---
 

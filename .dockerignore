@@ -1,0 +1,17 @@
+.git
+.gitignore
+.vscode
+.cursor
+**/node_modules
+**/.next
+**/.cache
+**/dist
+**/generated
+**/docker-compose*
+**/Dockerfile*
+**/.dockerignore
+**/*.md
+**/.env
+**/.env.local
+setup-env.sh
+deploy.sh

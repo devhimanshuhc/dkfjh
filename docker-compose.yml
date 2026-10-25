@@ -1,0 +1,21 @@
+services:
+  server:
+    build: ./apps/server
+    env_file:
+      - path: ./apps/server/.env
+        required: false
+    ports:
+      - "3001:3001"
+      - "3000:3000"
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:3001
+        NEXT_PUBLIC_APP_URL: http://localhost:3000
+    # Shares the server's network so localhost:3001 resolves the same in the browser and during SSR.
+    network_mode: service:server
+    depends_on:
+      - server

@@ -178,7 +178,6 @@ Interactive API docs: `/docs` on the API (locally `http://localhost:3001/docs`).
 ├── docs/task.md                    The project brief
 ├── docker-compose.yml              Runs the server and web app together
 ├── turbo.json                      Turborepo task setup
-├── .github/workflows/              CI: audit, secret scan, lint, typecheck, tests
 ├── CLAUDE.md, AGENTS.md, .agents/  Coding rules and skills for AI assistants
 └── README.md
 ```
@@ -283,4 +282,4 @@ In the **API** project, set `CORS_ORIGINS` to `["https://<web-project>.vercel.ap
 - **Tests:** 29 backend tests (pytest) and 91 frontend tests (Vitest and Testing Library). The backend tests never hit the network; the Elexon client is tested with a mock transport.
 - **Small pure functions:** forecast selection, alignment and the measures are plain functions that are easy to test and explain.
 - **Every async view has states:** loading, error and empty states are handled explicitly.
-- **Checks:** linting, type checking and tests run in CI and in pre-commit hooks (lefthook).
+- **Checks:** linting, type checking and tests run in pre-commit hooks (lefthook).

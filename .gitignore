@@ -43,3 +43,9 @@ yarn-error.log*
 apps/web/combined-report.json
 combined-report.json
 .playwright-mcp
+
+# Demo video sources and pipeline (kept local)
+video/
+docs/audio/
+docs/transcript/
+docs/demo-script.md

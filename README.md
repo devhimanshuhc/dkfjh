@@ -1,15 +1,20 @@
-# DKFJH — UK Wind Forecast Monitor
+![WIND-FORECAST](.github/banner.svg)
+
+# UK Wind Forecast Monitor 🌬️
+
+[Live app](https://web-pink-zeta-27.vercel.app) | [Demo video](https://www.youtube.com/watch?v=P3tT9g3CfwM)
+
+![Live app](https://img.shields.io/badge/live_app-web--pink--zeta--27.vercel.app-4cc3f5?style=for-the-badge&logo=vercel&logoColor=white)![Demo video](https://img.shields.io/badge/demo-YouTube-ff0000?style=for-the-badge&logo=youtube&logoColor=white)![AI-assisted with Claude Code](https://img.shields.io/badge/AI_assisted-Claude_Code-d97757?style=for-the-badge&logo=anthropic&logoColor=white)
+
+![Data: Elexon BMRS](https://img.shields.io/badge/data-Elexon_BMRS-1f7fc4?style=for-the-badge)![Backend: FastAPI](https://img.shields.io/badge/backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)![Frontend: Next.js 16](https://img.shields.io/badge/frontend-Next.js_16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)![Python 3.12](https://img.shields.io/badge/python-3.12-3776ab?style=for-the-badge&logo=python&logoColor=white)
 
 A web app that shows how far UK wind power forecasts could be trusted when buying electricity one day ahead, using Elexon data for January 2026.
 
-- **Live app:** _add the deployed Vercel link here_
-- **Demo video:** _add the unlisted YouTube link here_
-
 ---
 
-## Built with AI: Claude Code
+## AI tools used
 
-This project was built with **[Claude Code](https://claude.com/claude-code)**, Anthropic's AI coding assistant, working in the terminal under the author's direction.
+I used **[Claude Code](https://claude.com/claude-code)**, Anthropic's AI coding assistant, while building this project. I designed the approach, made the product and technical decisions, and reviewed and verified the results
 
 ---
 
@@ -69,7 +74,7 @@ The backend fetches both datasets **once** (about 1,500 actual rows and 20,000 f
 
 For every hour `T` and a chosen lead time `H`:
 
-> Use the **most recent forecast published at or before `T − H`**: the one a buyer could actually have seen.
+> Use the **most recent forecast published at or before** `T − H`: the one a buyer could actually have seen.
 
 Forecast rows published after their own target time are dropped. If no forecast is old enough, the hour has no forecast and is shown as a gap.
 
@@ -178,6 +183,7 @@ Interactive API docs: `/docs` on the API (locally `http://localhost:3001/docs`).
 │   ├── typescript-config/          Shared tsconfig presets
 │   └── db/                         Prisma package left over from the starter template (not used)
 ├── docs/task.md                    The project brief
+├── .github/                        README banner and Dependabot config
 ├── docker-compose.yml              Runs the server and web app together
 ├── turbo.json                      Turborepo task setup
 ├── CLAUDE.md, AGENTS.md, .agents/  Coding rules and skills for AI assistants
@@ -233,6 +239,7 @@ docker compose up --build
 ```
 
 Then open:
+
 - **App:** http://localhost:3000
 - **API docs:** http://localhost:3001/docs
 
@@ -259,8 +266,8 @@ The app is deployed as **two Vercel projects from this one repository**: one for
 1. In Vercel: **Add New → Project → import this GitHub repo**.
 2. **Root Directory:** `apps/server`.
 3. **Framework Preset:** FastAPI. Vercel reads the dependencies from `pyproject.toml` / `uv.lock`, and the app entry point from `[tool.vercel] entrypoint = "app.main:app"`.
-4. **Environment variable:** `CORS_ORIGINS` = `["http://localhost:3000"]` for now. You update it in step 3.
-5. **Deploy**, then check `https://<api-project>.vercel.app/health` returns `{"status":"healthy"}`.
+4. **Environment variable:** `CORS_ORIGINS` = `["http://localhost:3000", "https://web-pink-zeta-27.vercel.app"]` for now. You update it in step 3.
+5. **Deploy**, then check `https://dkfjh-api.vercel.app/health` returns `{"status":"healthy"}`.
 
 ### 2. Website (Next.js)
 
@@ -268,14 +275,14 @@ The app is deployed as **two Vercel projects from this one repository**: one for
 2. **Root Directory:** `apps/web`. **Framework Preset:** Next.js.
 3. **Build Command** (override): `cd ../.. && pnpm turbo run build --filter=web`. This builds the shared package first.
 4. **Environment variables:**
-   - `NEXT_PUBLIC_API_URL` = `https://<api-project>.vercel.app`
-   - `NEXT_PUBLIC_APP_URL` = `https://<web-project>.vercel.app`
+   - `NEXT_PUBLIC_API_URL` = `https://dkfjh-api.vercel.app`
+   - `NEXT_PUBLIC_APP_URL` = `https://web-pink-zeta-27.vercel.app`
    - `ENABLE_EXPERIMENTAL_COREPACK` = `1`, so Vercel uses the pnpm version pinned in `package.json`
 5. **Deploy.**
 
 ### 3. Connect them
 
-In the **API** project, set `CORS_ORIGINS` to `["https://<web-project>.vercel.app"]` and redeploy, so the browser is allowed to call the API.
+In the **API** project, set `CORS_ORIGINS` to `["https://web-pink-zeta-27.vercel.app"]` and redeploy, so the browser is allowed to call the API.
 
 ---
 

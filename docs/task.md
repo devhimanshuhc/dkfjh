@@ -49,11 +49,9 @@ Please create an unlisted youtube video (guide) as explained below.
 
 The video needs to have 2 parts: 
 
-Part 1: Assume that you’re presenting the portal and analysis to the customer as the output of a pilot project you’ve done for them. The goal is to impress them. Please include a max 5- minute-long initial overview. 
+Part 1: Assume that you’re presenting the portal and analysis to the customer as the output of a pilot project you’ve done for them. The goal is to impress them. Please include a max 5-minute-long initial overview.
 
-Part 2: Assume that you’re showing the work to the tech load for his/her review. You need to explain the architecture, design, analysis, code base, and key development practices. The 
-
-goal is to make review easy and to provide clear knowledge transfer too.  Please include a max 5-minute-long initial overview. 
+Part 2: Assume that you’re showing the work to the tech load for his/her review. You need to explain the architecture, design, analysis, code base, and key development practices. The goal is to make review easy and to provide clear knowledge transfer too. Please include a max 5-minute-long initial overview.
 
 Please limit the video to a maximum of 10 minutes. 
 

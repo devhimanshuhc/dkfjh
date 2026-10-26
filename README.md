@@ -4,9 +4,9 @@
 
 [Live app](https://web-pink-zeta-27.vercel.app) | [Demo video](https://www.youtube.com/watch?v=P3tT9g3CfwM)
 
-![Live app](https://img.shields.io/badge/live_app-web--pink--zeta--27.vercel.app-4cc3f5?style=for-the-badge&logo=vercel&logoColor=white)![Demo video](https://img.shields.io/badge/demo-YouTube-ff0000?style=for-the-badge&logo=youtube&logoColor=white)![AI-assisted with Claude Code](https://img.shields.io/badge/AI_assisted-Claude_Code-d97757?style=for-the-badge&logo=anthropic&logoColor=white)
+[![Live app](https://img.shields.io/badge/live_app-web--pink--zeta--27.vercel.app-4cc3f5?style=for-the-badge&logo=vercel&logoColor=white)](https://web-pink-zeta-27.vercel.app) [![Demo video](https://img.shields.io/badge/demo-YouTube-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=P3tT9g3CfwM) [![AI-assisted with Claude Code](https://img.shields.io/badge/AI_assisted-Claude_Code-d97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.com/claude-code)
 
-![Data: Elexon BMRS](https://img.shields.io/badge/data-Elexon_BMRS-1f7fc4?style=for-the-badge)![Backend: FastAPI](https://img.shields.io/badge/backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)![Frontend: Next.js 16](https://img.shields.io/badge/frontend-Next.js_16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)![Python 3.12](https://img.shields.io/badge/python-3.12-3776ab?style=for-the-badge&logo=python&logoColor=white)
+[![Data: Elexon BMRS](https://img.shields.io/badge/data-Elexon_BMRS-1f7fc4?style=for-the-badge)](https://bmrs.elexon.co.uk) [![Backend: FastAPI](https://img.shields.io/badge/backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com) [![Frontend: Next.js 16](https://img.shields.io/badge/frontend-Next.js_16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org) [![Python 3.12](https://img.shields.io/badge/python-3.12-3776ab?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 
 A web app that shows how far UK wind power forecasts could be trusted when buying electricity one day ahead, using Elexon data for January 2026.
 
